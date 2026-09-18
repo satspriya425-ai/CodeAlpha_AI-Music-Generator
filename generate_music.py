@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from music21 import stream, note, chord
 
 # Load trained model
-model = load_model("output/music_model.keras")
+model = load_model("output/music_model.h5")
 
 # Load note mapping
 with open("output/note_mapping.pkl", "rb") as file:
