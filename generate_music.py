@@ -1,3 +1,4 @@
+import sys
 import pickle
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -14,7 +15,7 @@ int_to_note = {value: key for key, value in note_to_int.items()}
 
 # Generation settings
 sequence_length = 50
-num_notes = 100
+num_notes = int(sys.argv[1]) if len(sys.argv) > 1 else 100
 
 # Load original note sequence
 with open("output/notes.pkl", "rb") as file:
